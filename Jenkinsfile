@@ -1,11 +1,5 @@
 pipeline {
     agent any
-    stages {
-        stage('Clone Git') {
-            steps {
-                git 'https://github.com/yunazini/flask-cicd.git'
-            }
-        }
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t flask-cicd-app .'
